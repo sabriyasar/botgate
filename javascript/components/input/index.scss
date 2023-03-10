@@ -1,0 +1,77 @@
+.input {
+
+  input, textarea {
+    border-radius: $borderRadius;
+
+    @include useTheme() {
+      background-color: getColor($secondary-bg-color);
+      color: getColor($primary-color);
+      border-color: getColor($secondary-input-border-color);
+    }
+  }
+
+  .ant-input-number {
+    width: 100%;
+    border-radius: $borderRadius;
+
+    @include useTheme() {
+      background-color: getColor($secondary-bg-color);
+      color: getColor($primary-color);
+      border-color: getColor($secondary-input-border-color);
+    }
+  }
+
+  .ant-input-search {
+
+    input {
+      @include useTheme() {
+        background-color: getColor($secondary-bg-color);
+        color: getColor($primary-color);
+        border-color: getColor($secondary-input-border-color);
+      }
+    }
+
+    .ant-input-group-addon {
+      button {
+        border-top-right-radius: $borderRadius !important;
+        border-bottom-right-radius: $borderRadius !important;
+
+        @include useTheme() {
+          background-color: getColor($secondary-bg-color) !important;
+          color: getColor($primary-color) !important;
+          border-color: getColor($secondary-input-border-color) !important;
+        }
+      }
+    }
+  }
+
+  .searchInputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .searchInputIcon {
+    margin-left: -35px;
+    z-index: 1;
+  }
+
+  .searchIconContainer {
+    display: flex;
+    cursor: pointer;
+    width: 10px;
+    svg {
+      width: 13px;
+    }
+  }
+
+  .dark {
+    input {
+      @include useTheme() {
+        background-color: getColor($primary-bg-color);
+        color: getColor($secondary-color);
+        border-color: getColor($primary-input-border-color);
+      }
+    }
+  }
+}

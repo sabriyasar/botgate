@@ -1,0 +1,73 @@
+.dropdown {
+  .ant-select-selector {
+    border-radius: $borderRadius !important;
+    align-items: center;
+
+    @include useTheme() {
+      background-color: getColor($secondary-bg-color) !important;
+      color: getColor($primary-color);
+      border-color: getColor($secondary-input-border-color) !important;
+    }
+  }
+
+  .ant-select-selection-placeholder {
+    @include useTheme() {
+      color: getColorLighten($primary-color, 25%);
+    }
+  }
+
+  .ant-select-selection-item {
+    font-weight: 600;
+  }
+
+  .ant-select-arrow {
+    border-radius: $borderRadius;
+    top: 32%;
+    right: 5px;
+    width: 22px;
+    height: 24px;
+    margin-top: -6px;
+    font-size: 16px;
+
+    @include useTheme() {
+      background-color: getColorOpacity($secondary-bg-color, 0.37);
+      color: getColor($primary-color);
+    }
+
+    .anticon {
+      vertical-align: middle;
+      & > svg {
+        vertical-align: middle;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  input {
+    background-color: transparent !important;
+    font-size: 16px;
+  }
+
+  .dark {
+    .ant-select-selector {
+      @include useTheme() {
+        background-color: getColor($primary-bg-color) !important;
+        color: getColor($secondary-color) !important;
+        border-color: getColor($primary-input-border-color) !important;
+      }
+    }
+
+    .ant-select-selection-placeholder {
+      @include useTheme() {
+        color: getColorDarken($secondary-color, 25%) !important;
+      }
+    }
+
+    .ant-select-arrow {
+      @include useTheme() {
+        background-color: getColorOpacity($secondary-bg-color, 0.37);
+        color: getColor($secondary-color);
+      }
+    }
+  }
+}
